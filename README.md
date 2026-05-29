@@ -1,7 +1,6 @@
 # 🚀 Job Application Tracker Portal
 
-A modern SaaS-style Job Application Tracker inspired by LinkedIn, Naukri, Internshala, and Notion dashboards.
-
+A modern SaaS-style Job Application Tracker dashboard.
 This platform helps users manage job applications, internships, interviews, offers, recruitment pipelines, and analytics in one professional dashboard.
 
 ---
