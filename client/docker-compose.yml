@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+
+  # =========================
+  # FRONTEND
+  # =========================
+
+  client:
+    build: ./client
+
+    container_name: jobtracker-client
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - server
+
+  # =========================
+  # BACKEND
+  # =========================
+
+  server:
+    build: ./server
+
+    container_name: jobtracker-server
+
+    restart: always
+
+    ports:
+      - "5000:5000"
+
+    env_file:
+      - .env
+
+    depends_on:
+      - mongo
+      - redis
+
+  # =========================
+  # MONGODB
+  # =========================
+
+  mongo:
+    image: mongo:7
+
+    container_name: jobtracker-mongo
+
+    restart: always
+
+    ports:
+      - "27017:27017"
+
+    volumes:
+      - mongo_data:/data/db
+
+  # =========================
+  # REDIS
+  # =========================
+
+  redis:
+    image: redis:7
+
+    container_name: jobtracker-redis
+
+    restart: always
+
+    ports:
+      - "6379:6379"
+
+volumes:
+  mongo_data:

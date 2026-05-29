@@ -1,0 +1,76 @@
+# dependencies
+node_modules
+
+# production
+dist
+build
+
+# environment variables
+.env
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# coverage
+coverage
+
+# cache
+.cache
+.vite
+
+# macOS files
+.DS_Store
+
+# Windows files
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# IntelliJ
+.idea/
+
+# system files
+*.swp
+
+# optional npm cache
+.npm
+
+# eslint cache
+.eslintcache
+
+# parcel cache
+.parcel-cache
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# generated files
+*.tgz
+
+# vercel
+.vercel
+
+# netlify
+.netlify
+
+# uploads
+uploads/
+
+# temporary files
+tmp/
+temp/
